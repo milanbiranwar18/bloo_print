@@ -11,7 +11,6 @@ from django.conf import settings
 CACHE_TTL = getattr(settings, 'CACHE_TTL', 60 * 5)
 
 
-# Logging setup
 logging.basicConfig(filename='inventory.log',
                     filemode='a',
                     format='%(asctime)s %(levelname)s-%(message)s',
