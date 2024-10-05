@@ -49,7 +49,7 @@ def user_logout(request):
         token = RefreshToken(refresh_token)
         token.blacklist()
         logger.info("User logged out successfully.")
-        return Response({"message": "Logout successful"}, status=status.HTTP_205_RESET_CONTENT)
+        return Response({"message": "Logout successfully"}, status=status.HTTP_205_RESET_CONTENT)
     except Exception as e:
         logger.error(f"User logout failed: {e}")
         return Response({"error": str(e)}, status=status.HTTP_400_BAD_REQUEST)
