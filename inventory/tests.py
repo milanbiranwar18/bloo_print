@@ -38,7 +38,7 @@ class InventoryTests(APITestCase):
     def test_create_item_duplicate_name(self):
         url = reverse('create_item')
         data = {
-            "name": "Test Item",  # Duplicate name
+            "name": "Test Item",
             "sku": "DUPLICATESKU",
             "quantity": 5,
             "price": 50.0,
